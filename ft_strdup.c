@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 19:02:47 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 19:04:01 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:11:18 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:13:21 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {

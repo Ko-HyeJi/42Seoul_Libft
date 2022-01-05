@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 19:28:20 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 19:42:22 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:11:04 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:36:48 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c);

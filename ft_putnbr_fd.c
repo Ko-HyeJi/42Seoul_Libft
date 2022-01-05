@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 19:37:59 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 19:47:11 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:10:52 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:32:50 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);

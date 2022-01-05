@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 19:29:45 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 19:43:47 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:11:58 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:38:19 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f) (unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));

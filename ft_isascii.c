@@ -3,11 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:39:58 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 18:56:10 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:09:21 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:13:35 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isascii(int c)
+{
+	if ((c >= 0) && (c <= 127))
+		return (1);
+	else
+		return (0);
+}

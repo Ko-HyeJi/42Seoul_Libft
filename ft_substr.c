@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 19:21:29 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 19:38:45 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:12:50 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:38:36 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int strat, size_t len);
+char	*ft_substr(char const *s, unsigned int strat, size_t len);

@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 19:28:56 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 19:42:54 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:09:45 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:37:53 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_itoa(int n);
+char	*ft_itoa(int n);

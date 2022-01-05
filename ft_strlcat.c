@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeji_ko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:50:02 by hyeji_ko          #+#    #+#             */
-/*   Updated: 2021/12/14 18:50:56 by hyeji_ko         ###   ########.fr       */
+/*   Created: 2022/01/03 19:11:38 by hyko              #+#    #+#             */
+/*   Updated: 2022/01/03 19:13:19 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 unsigned int	str_len(char *str)
 {
@@ -45,4 +44,3 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return (src_len + size);
 	return (src_len + dest_len);
 }
-
