@@ -6,8 +6,22 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:11 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/03 19:13:22 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/05 23:28:09 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			return ((char *)s + i);
+		i++;
+	}
+	return (NULL);
+}
