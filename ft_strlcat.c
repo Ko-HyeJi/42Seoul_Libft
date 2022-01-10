@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:38 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/05 22:42:58 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/09 23:25:08 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	i = dst_len;
 	j = 0;
+	if (size < dst_len)
+		return (src_len + size);
 	while (src[j] != '\0' && i < size - 1 && size != 0)
 	{
 		dst[i] = src[j];
 		i++;
 		j++;
 	}
-	if (size < dst_len)
-		return (src_len + size);
+	dst[i] = '\0';
 	return (dst_len + src_len);
 }

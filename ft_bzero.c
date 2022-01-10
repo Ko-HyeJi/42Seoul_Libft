@@ -6,8 +6,13 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:08:08 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/03 19:08:22 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/09 19:16:14 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}

@@ -6,36 +6,26 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:18 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/03 19:13:21 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/08 19:54:17 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s1)
 {
 	int		i;
 	int		len;
-	char	*cp_src;
+	char	*s2;
 
-	len = ft_strlen(src);
-	cp_src = (char *)malloc(sizeof(char) * (len + 1));
+	len = ft_strlen(s1);
+	s2 = (char *)malloc(sizeof(char) * (len + 1));
 	i = 0;
-	while (src[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		cp_src[i] = src[i];
+		s2[i] = s1[i];
 		i++;
 	}
-	cp_src[i] = '\0';
-	return (cp_src);
+	s2[i] = '\0';
+	return (s2);
 }
