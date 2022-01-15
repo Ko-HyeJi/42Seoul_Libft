@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:45 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/09 23:15:16 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/15 22:12:40 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,18 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	s_len;
+	size_t	src_len;
 
 	i = 0;
-	s_len = 0;
-	while (src[s_len] != '\0')
-		s_len++;
-	if (dstsize == 0)
-		return (s_len);
-	while (i < (dstsize - 1) && src[i] != '\0')
+	src_len = ft_strlen(src);
+	if (dstsize != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (i < (dstsize - 1) && src[i] != '\0')
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (s_len);
+	return (src_len);
 }

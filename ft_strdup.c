@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:18 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/08 19:54:17 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/15 23:50:34 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strdup(const char *s1)
 
 	len = ft_strlen(s1);
 	s2 = (char *)malloc(sizeof(char) * (len + 1));
+	if (s2 == NULL)
+		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
 	{

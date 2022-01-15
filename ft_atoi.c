@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:07:53 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/06 00:14:44 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/12 10:29:50 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	result = 0;
 	while ((9 <= str[i] && str[i] <= 13) || str[i] == 32)
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = sign * -1;
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	while ('0' <= str[i] && str[i] <= '9')
 	{
-		result = result * 10 + str[i] - '0';
+		result = result * 10 + (str[i] - 48);
 		i++;
 	}
 	return (result * sign);

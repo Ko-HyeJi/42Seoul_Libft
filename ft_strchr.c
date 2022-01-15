@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:11 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/05 23:28:09 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/15 23:50:18 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)s + i);
 		i++;
 	}
+	if ((unsigned char)c == '\0')
+		return ((char *)s + i);
 	return (NULL);
 }
