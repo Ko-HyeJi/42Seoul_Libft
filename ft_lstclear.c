@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:18:36 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/12 19:07:30 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/17 00:50:15 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (del)(void*))
 {
 	t_list	*curr;
 
+	if (lst == NULL || del == NULL)
+		return ;
 	while (*lst != NULL)
 	{
 		curr = (*lst)->next;

@@ -6,7 +6,7 @@
 #    By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 18:58:22 by hyko              #+#    #+#              #
-#    Updated: 2022/01/16 21:51:43 by hyko             ###   ########.fr        #
+#    Updated: 2022/01/17 01:55:27 by hyko             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,6 @@ clean :
 fclean : clean
 	$(RM) $(NAME)
 
-re : fclean $(NAME)
+re : fclean all
 
 .PHONY : all clean fclean re

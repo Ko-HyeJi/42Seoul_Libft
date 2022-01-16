@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:09:45 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/12 12:09:14 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/17 02:34:28 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,10 @@ char	*ft_itoa(int n)
 		nb = nb * -1;
 		i = 1;
 	}
-	while (i < len)
+	while (--len >= i)
 	{
-		str[len - 1] = nb % 10 + 48;
+		str[len] = nb % 10 + 48;
 		nb = nb / 10;
-		len--;
 	}
 	return (str);
 }
