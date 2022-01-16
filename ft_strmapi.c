@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:58 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/12 13:41:25 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/16 21:08:48 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*new_s;
 
+	if (s == 0 || f == 0)
+		return (0);
 	i = 0;
 	len = (ft_strlen(s));
 	new_s = (char *)malloc(sizeof(char) * (len + 1));

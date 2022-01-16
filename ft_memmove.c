@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:10:19 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/09 22:16:23 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/16 01:42:39 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		{
 			d[i] = s[i];
 			i++;
-		}		
-	}
+		}
+	}		
 	else if (d > s)
 	{
 		while (i < len)

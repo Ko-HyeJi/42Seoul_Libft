@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:10:27 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/09 17:25:34 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/16 01:47:44 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		tmp[i] = c;
+		tmp[i] = (unsigned char)c;
 		i++;
 	}
 	return (b);
