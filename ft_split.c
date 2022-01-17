@@ -6,10 +6,11 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:11:04 by hyko              #+#    #+#             */
-/*   Updated: 2022/01/17 05:54:35 by hyko             ###   ########.fr       */
+/*   Updated: 2022/01/17 22:15:49 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 static char	**ft_malloc_error(char **str)
@@ -46,15 +47,15 @@ int	word_count(char const *s, char c)
 	return (count);
 }
 
-int	word_len(char const *s, char c, int i)
+int	word_len(char const *s, char c)
 {
 	int	len;
 
 	len = 0;
-	while (s[i] != c)
+	while (*s != c && *s != '\0')
 	{
-		i++;
 		len++;
+		s++;
 	}
 	return (len);
 }
@@ -65,25 +66,25 @@ char	**ft_split(char const *s, char c)
 	int		total_word;
 	int		next_word_len;
 	int		i;
-	int		j;
 
+	if (s == NULL)
+		return (NULL);
 	total_word = word_count(s, c);
 	str = (char **)malloc(sizeof(char *) * (total_word + 1));
 	if (str == NULL)
 		return (NULL);
-	i = 0;
-	j = -1;
-	while (++j < total_word)
+	i = -1;
+	while (++i < total_word)
 	{
-		while (s[i] == c)
-			i++;
-		next_word_len = word_len(s, c, i);
-		str[j] = (char *)malloc(sizeof(char) * (next_word_len + 1));
-		if (str[j] == NULL)
+		while (*s == c)
+			s++;
+		next_word_len = word_len(s, c);
+		str[i] = (char *)malloc(sizeof(char) * (next_word_len + 1));
+		if (str[i] == NULL)
 			return (ft_malloc_error(str));
-		ft_strlcpy(str[j], &s[i], next_word_len + 1);
-		i += next_word_len;
+		ft_strlcpy(str[i], s, next_word_len + 1);
+		s += next_word_len;
 	}
-	str[j] = NULL;
+	str[i] = NULL;
 	return (str);
 }
