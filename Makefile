@@ -17,6 +17,8 @@ CFLAG = -Wall -Wextra -Werror
 
 RM = rm -rf
 
+INCLUDE = ./libft.h
+
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_toupper.c ft_tolower.c \
 		ft_strlen.c ft_strncmp.c ft_strlcpy.c \
@@ -31,26 +33,17 @@ SRC_BN = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
 			ft_lstiter.c ft_lstmap.c
 
+%.o : %.c
+	$(CC) $(CFLAG) -c $^ -o $@
+
 OBJ = $(SRC:.c=.o)
 
 OBJ_BONUS = $(SRC_BN:.c=.o)
 
-ifdef BONUS_FLAG
-    OBJ_SWITCH = $(OBJ) $(OBJ_BONUS)
-else
-    OBJ_SWITCH = $(OBJ)
-endif
-
 all : $(NAME)
-
-%.o : %.c
-	$(CC) $(CFLAG) -c $^ -o $@
 	
-$(NAME) : $(OBJ_SWITCH)
+$(NAME) : $(OBJ)
 	ar rc $@ $^	
-
-bonus :
-	$(MAKE) BONUS_FLAG=1 $(NAME)
 
 clean : 
 	$(RM) $(OBJ) $(OBJ_BONUS)
@@ -59,5 +52,8 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
+
+bonus : $(OBJ) $(OBJ_BONUS)
+	ar rc $(NAME) $^	
 
 .PHONY : all clean fclean re bonus
