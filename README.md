@@ -1,1 +1,1 @@
-# 42Seoul_Libft
+# 42seoul_Libft
